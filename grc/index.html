@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Security Platform</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../js/Chart.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+
+
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	
+	
+	  <!--google material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Obaits</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GRC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inventory</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Patches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mobile Devices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SIEM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">IPS/IDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Backup & Restore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vulnerabilities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ITSM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LMS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Softwares</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DMS</a>
+              </li>
+              <li>
+                <div class="d-flex flex-row-reverse bd-highlight">
+                  <div class="p-2 bd-highlight">
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                     <span class="material-icons">notifications</span>
+                     <span class="notification">4</span>
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">You Have 4 New Messages</a></li>
+                      <li><a href="#">You Have 4 New Messages</a></li>
+                      <li><a href="#">You Have 4 New Messages</a></li>
+                      <li><a href="#">You Have 4 New Messages</a></li>
+                     </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                      <span class="material-icons">question_answer</span>
+                    </a>
+                    </li>
+                    
+                    <li class="dropdown nav-item active">
+                      <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                     <img src="../assets/images/profile.jpg" style="width:40px; border-radius:40%;"/>
+                     <span class="xp-user-live"></span>
+                    </a>
+                     <ul class="dropdown-menu small-menu">
+                        <li><a href="#">
+                      <span class="material-icons">person_outline</span>
+                      Profile
+                      </a></li>
+                      <li><a href="#">
+                      <span class="material-icons">settings</span>
+                      Settings
+                      </a></li>
+                      <li><a href="#">
+                      <span class="material-icons">logout</span>
+                      Logout
+                      </a></li>
+                      
+                     </ul>
+                    </li>
+                  </div>
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="wrapper">
+        <aside id="sidebar">
+          <div class="d-flex">
+              <button class="toggle-btn" type="button">
+                  <i class="lni lni-grid-alt"></i>
+              </button>
+              <div class="sidebar-logo">
+                  <a href="#">GRC</a>
+              </div>
+          </div>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                  data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                  <i class="lni lni-protection"></i>
+                  <span>Program</span>
+              </a>
+              <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Scope</a>
+                  </li>
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Program Issues</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Goals</a>
+                  </li>
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Team Roles</a>
+                  </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                  data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                  <i class="lni lni-protection"></i>
+                  <span>Organization</span>
+              </a>
+              <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Business Units</a>
+                  </li>
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Liabilities</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Third Parties</a>
+                  </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                  data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                  <i class="lni lni-protection"></i>
+                  <span>Asset Management</span>
+              </a>
+              <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Assets</a>
+                  </li>
+                  <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Data Flows</a>
+                  </li>
+              </ul>
+            </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                    data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="lni lni-protection"></i>
+                    <span>Compliance Management</span>
+                </a>
+                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Compliance Exception</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Compliance Packages</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Compliance Analysis</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Compliance Analysis Findings</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Online Assessments</a>
+                    </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                    data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="lni lni-protection"></i>
+                    <span>Controls Catalogue</span>
+                </a>
+                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Internal Controls</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Support Contracts</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Business Continuity Plans</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Security Policies</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Policy Exceptions</a>
+                    </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                  <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                      data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                      <i class="lni lni-protection"></i>
+                      <span>Risk Management</span>
+                  </a>
+                  <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Asset Risk Management</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Risk Exceptions</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Third Party Risk Management</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Business Impact Analysis</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                      <i class="lni lni-cog"></i>
+                      <span>Settings</span>
+                  </a>
+              </li>
+          </ul>
+          <div class="sidebar-footer">
+              <a href="#" class="sidebar-link">
+                  <i class="lni lni-exit"></i>
+                  <span>Logout</span>
+              </a>
+          </div>
+      </aside>
+        <div class="main p-3">
+            <div class="text-center">
+                <h1>
+                    Sidebar Bootstrap 5
+                </h1>
+                <div class="container mt-4">
+                  <div id="grid" class="row g-3">
+                      <!-- Grid Items -->
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-1">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = ["red", "green","blue","orange","brown"];
+
+                            new Chart("barChart", {
+                              type: "bar",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                title: {
+                                  display: true,
+                                  text: "World Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-2">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="scatterChart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                            var xyValues = [
+                              {x:50, y:7},
+                              {x:60, y:8},
+                              {x:70, y:8},
+                              {x:80, y:9},
+                              {x:90, y:9},
+                              {x:100, y:9},
+                              {x:110, y:10},
+                              {x:120, y:11},
+                              {x:130, y:14},
+                              {x:140, y:14},
+                              {x:150, y:15}
+                            ];
+
+                            new Chart("scatterChart", {
+                              type: "scatter",
+                              data: {
+                                datasets: [{
+                                  pointRadius: 4,
+                                  pointBackgroundColor: "rgb(0,0,255)",
+                                  data: xyValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                scales: {
+                                  xAxes: [{ticks: {min: 40, max:160}}],
+                                  yAxes: [{ticks: {min: 6, max:16}}],
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-3">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="bar2Chart" style="width:100%;max-width:600px"></canvas>
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = ["red", "green","blue","orange","brown"];
+
+                            new Chart("bar2Chart", {
+                              type: "bar",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                title: {
+                                  display: true,
+                                  text: "World Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-4">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="doughnutChart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = [
+                              "#b91d47",
+                              "#00aba9",
+                              "#2b5797",
+                              "#e8c3b9",
+                              "#1e7145"
+                            ];
+
+                            new Chart("doughnutChart", {
+                              type: "doughnut",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                title: {
+                                  display: true,
+                                  text: "World Wide Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-5">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="pieChart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = [
+                              "#b91d47",
+                              "#00aba9",
+                              "#2b5797",
+                              "#e8c3b9",
+                              "#1e7145"
+                            ];
+                            
+                            new Chart("pieChart", {
+                              type: "pie",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                title: {
+                                  display: true,
+                                  text: "World Wide Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-6">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="doughnut2Chart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = [
+                              "#b91d47",
+                              "#00aba9",
+                              "#2b5797",
+                              "#e8c3b9",
+                              "#1e7145"
+                            ];
+
+                            new Chart("doughnut2Chart", {
+                              type: "doughnut",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                title: {
+                                  display: true,
+                                  text: "World Wide Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-7">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="bar4Chart" style="width:100%;max-width:600px"></canvas>
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = ["red", "green","blue","orange","brown"];
+
+                            new Chart("bar4Chart", {
+                              type: "bar",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                title: {
+                                  display: true,
+                                  text: "World Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-8">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="scatter3Chart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                            var xyValues = [
+                              {x:50, y:7},
+                              {x:60, y:8},
+                              {x:70, y:8},
+                              {x:80, y:9},
+                              {x:90, y:9},
+                              {x:100, y:9},
+                              {x:110, y:10},
+                              {x:120, y:11},
+                              {x:130, y:14},
+                              {x:140, y:14},
+                              {x:150, y:15}
+                            ];
+
+                            new Chart("scatter3Chart", {
+                              type: "scatter",
+                              data: {
+                                datasets: [{
+                                  pointRadius: 4,
+                                  pointBackgroundColor: "rgb(0,0,255)",
+                                  data: xyValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                scales: {
+                                  xAxes: [{ticks: {min: 40, max:160}}],
+                                  yAxes: [{ticks: {min: 6, max:16}}],
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-9">
+                          <div class="p-4 border bg-light text-center">
+                            <canvas id="bar5Chart" style="width:100%;max-width:600px"></canvas>
+                            <script>
+                            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                            var yValues = [55, 49, 44, 24, 15];
+                            var barColors = ["red", "green","blue","orange","brown"];
+
+                            new Chart("bar5Chart", {
+                              type: "bar",
+                              data: {
+                                labels: xValues,
+                                datasets: [{
+                                  backgroundColor: barColors,
+                                  data: yValues
+                                }]
+                              },
+                              options: {
+                                legend: {display: false},
+                                title: {
+                                  display: true,
+                                  text: "World Wine Production 2018"
+                                }
+                              }
+                            });
+                            </script>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-10">
+                          <div class="p-4 border bg-light text-center">Content 10</div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-11">
+                          <div class="p-4 border bg-light text-center">Content 11</div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4 draggable" draggable="true" id="content-12">
+                          <div class="p-4 border bg-light text-center">Content 12</div>
+                      </div>
+                  </div>
+               </div>
+                <!-- Drag-and-Drop Script -->
+                <script>
+                    const grid = document.getElementById('grid');
+                    let draggedItem = null;
+
+                    // Add drag-and-drop functionality to all draggable items
+                    document.querySelectorAll('.draggable').forEach(item => {
+                        // When dragging starts
+                        item.addEventListener('dragstart', (e) => {
+                            draggedItem = item;
+                            setTimeout(() => item.classList.add('hidden'), 0); // Hide item during drag
+                        });
+
+                        // When dragging ends
+                        item.addEventListener('dragend', () => {
+                            draggedItem.classList.remove('hidden');
+                            draggedItem = null;
+                        });
+                    });
+
+                    // Allow drop on the grid container
+                    grid.addEventListener('dragover', (e) => {
+                        e.preventDefault();
+                        const target = e.target.closest('.draggable'); // Find the nearest draggable element
+                        if (target && target !== draggedItem) {
+                            target.classList.add('drag-over'); // Highlight the target
+                        }
+                    });
+
+                    // Remove highlight when leaving the draggable area
+                    grid.addEventListener('dragleave', (e) => {
+                        const target = e.target.closest('.draggable');
+                        if (target) target.classList.remove('drag-over');
+                    });
+
+                    // Handle drop
+                    grid.addEventListener('drop', (e) => {
+                        e.preventDefault();
+                        const target = e.target.closest('.draggable');
+                        if (target && target !== draggedItem) {
+                            target.classList.remove('drag-over');
+                            // Swap the dragged and target items
+                            grid.insertBefore(draggedItem, target.nextSibling);
+                        }
+                    });
+                </script>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+         $(".xp-menubar").on('click',function(){
+         $("#sidebar").toggleClass('active');
+       $("#content").toggleClass('active');
+       });
+       
+       $('.xp-menubar,.body-overlay').on('click',function(){
+          $("#sidebar,.body-overlay").toggleClass('show-nav');
+       });
+       
+      });
+   </script>
+</body>
+</html>
